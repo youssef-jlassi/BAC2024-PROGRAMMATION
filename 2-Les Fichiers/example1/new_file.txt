@@ -1,0 +1,2 @@
+Ceci est un nouveau fichier créé en Python.
+Nous allons écrire ce contenu dans le fichier.
