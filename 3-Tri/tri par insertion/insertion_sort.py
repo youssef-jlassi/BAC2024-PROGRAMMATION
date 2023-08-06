@@ -13,8 +13,10 @@ def insertion_sort(arr):
 
 # Exemple d'utilisation
 if __name__ == "__main__":
-    unsorted_array = [64, 34, 25, 12, 22, 11, 90]
-    print("Tableau non trié:", unsorted_array)
+    # Demander à l'utilisateur de saisir les éléments du tableau
+    input_str = input("Entrez les éléments du tableau séparés par des espaces: ")
+    unsorted_array = [int(num) for num in input_str.split()]
+
 
     insertion_sort(unsorted_array)
     print("Tableau trié:", unsorted_array)

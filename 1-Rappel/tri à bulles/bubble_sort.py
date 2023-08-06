@@ -21,6 +21,7 @@ if __name__ == "__main__":
     input_str = input("Entrez les éléments du tableau séparés par des espaces: ")
     unsorted_array = [int(num) for num in input_str.split()]
 
+
     print("Tableau non trié:", unsorted_array)
 
     bubble_sort(unsorted_array)
