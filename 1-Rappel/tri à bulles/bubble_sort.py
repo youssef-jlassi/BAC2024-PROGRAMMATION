@@ -15,9 +15,12 @@ def bubble_sort(arr):
         # Si aucun échange n'a été effectué dans cette itération, le tableau est déjà trié
         if not swapped:
             break
-# Exemple d'utilisation
+
 if __name__ == "__main__":
-    unsorted_array = [64, 34, 25, 12, 22, 11, 90]
+    # Demander à l'utilisateur de saisir les éléments du tableau
+    input_str = input("Entrez les éléments du tableau séparés par des espaces: ")
+    unsorted_array = [int(num) for num in input_str.split()]
+
     print("Tableau non trié:", unsorted_array)
 
     bubble_sort(unsorted_array)
