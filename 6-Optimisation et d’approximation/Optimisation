@@ -1,0 +1,26 @@
+def square_root_approximation(number, epsilon=1e-6):
+    """
+    Approxime la racine carrée d'un nombre en utilisant la méthode de recherche de dichotomie.
+    number : Le nombre dont nous voulons approximer la racine carrée.
+    epsilon : La précision souhaitée pour l'approximation.
+    """
+    if number < 0:
+        return "Impossible de calculer la racine carrée d'un nombre négatif."
+    
+    left = 0
+    right = number
+    guess = (left + right) / 2
+    
+    while abs(guess**2 - number) > epsilon:
+        if guess**2 < number:
+            left = guess
+        else:
+            right = guess
+        guess = (left + right) / 2
+    
+    return guess
+
+# Approximation de la racine carrée de 9 avec une précision de 1e-6
+number = 9
+approximation = square_root_approximation(number)
+print(f"L'approximation de la racine carrée de {number} est : {approximation}")
