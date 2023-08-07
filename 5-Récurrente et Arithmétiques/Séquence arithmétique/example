@@ -1,0 +1,18 @@
+def sequence_arithmetique(a, d, n):
+    """
+    a : premier terme de la séquence
+    d : différence (le nombre constant ajouté à chaque terme pour obtenir le suivant)
+    n : nombre de termes à afficher
+    """
+    sequence = [a]
+    for i in range(1, n):
+        term = sequence[-1] + d
+        sequence.append(term)
+    return sequence
+
+# Tester la séquence arithmétique avec a = 2, d = 3, et les 10 premiers termes
+a = 2
+d = 3
+n = 10
+result = sequence_arithmetique(a, d, n)
+print(f"La séquence arithmétique avec a = {a}, d = {d} : {result}")
